@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="SihApp">
+<head>
+    <meta charset="UTF-8">
+    <title>SIH</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/sih.css">
+</head>
+<body ng-controller="SihCtrl">
+
+<div class="container">
+    <h3 style="text-align:center">Ministry Of Civil Aviation</h3>
+<form name="myform" style="padding:20px">
+    <input type="text" placeholder="Airport" list="airport" style="margin:10px" ng-model="data.airport" required>
+    <datalist id="airport" ng-model="data.airports">
+        <option id="a1">{{airport.id.DEL}}</option>
+        <option id="a2">{{airport.id.IXA}}</option>
+        <option id="a3">{{airport.id.AMD}}</option>
+        <option id="a4">{{airport.id.ATQ}}</option>
+        <option id="a5">Bengaluru</option>
+        <option value="Bhubaneswar"></option>
+        <option value="Chandigarh"></option>
+    </datalist>
+    <input type="text" placeholder="Flight carrier"  list="carriers" ng-model="data.carrier" style="margin:10px" required>
+    <datalist id="carriers">
+        <option value="Indigo"></option>
+        <option value="Spicejet"></option>
+        <option value="AirIndia"></option>
+        <option value="JetAirways"></option>
+    </datalist>
+
+    <input type="text" placeholder="Flight Details" list="fDetails" ng-disabled="myform.$invalid" style="margin:10px">
+    <datalist id="fDetails">
+        <option value="IJ700"></option>
+        <option value="SJ700"></option>
+        <option value="JT700"></option>
+        <option value="AI700"></option>
+    </datalist>
+
+    <a class="btn btn-success" href="map"  ng-disabled="myform.$invalid" style="margin:10px;">Submit</a>
+
+    <!-- <button class="btn btn-danger" ng-click="showq()" ng-disabled="myform.$invalid" style="margin:10px">Show queue</button>
+    -->
+   </form> 
+    <hr>
+</div>
+
+    <div ng-view></div>
+
+<!-- libraries -->
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/ui-bootstrap-tpls-0.11.2.min.js"></script>
+    <script src="js/angular-animate.min.js"></script>
+
+ <!-- js files -->
+    <script src="app.js"></script>
+    <script src="js/jquery.min.js"></script>
+
+</body>
+</html>

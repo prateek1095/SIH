@@ -1,0 +1,36 @@
+<h3 style="text-align:center">Ministry Of Civil Aviation</h3>
+<form name="myform" style="padding:20px">
+    <input type="text" placeholder="Airport" list="airports" style="margin:10px" ng-model="data.airport" required>
+    <datalist id="airports">
+        <option value="Agartala"></option>
+        <option value="Ahmedabad"></option>
+        <option value="Amritsar"></option>
+        <option value="Bagdogra"></option>
+        <option value="Bengaluru"></option>
+        <option value="Bhubaneswar"></option>
+        <option value="Chandigarh"></option>
+    </datalist>
+    <input type="text" placeholder="Flight carrier"  list="carriers" ng-model="data.carrier" style="margin:10px" required>
+    <datalist id="carriers">
+        <option value="Indigo"></option>
+        <option value="Spicejet"></option>
+        <option value="AirIndia"></option>
+        <option value="JetAirways"></option>
+    </datalist>
+
+    <input type="text" placeholder="Flight Details" list="fDetails" ng-disabled="myform.$invalid" style="margin:10px">
+    <datalist id="fDetails">
+        <option value="Indigo"></option>
+        <option value="Spicejet"></option>
+        <option value="AirIndia"></option>
+        <option value="JetAirways"></option>
+    </datalist>
+
+
+    <button class="btn btn-success"  ng-disabled="myform.$invalid" style="margin:10px;">Submit</button>
+
+    <!-- <button class="btn btn-danger" ng-click="showq()" ng-disabled="myform.$invalid" style="margin:10px">Show queue</button>
+    -->
+
+   </form> 
+    <hr>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="SihApp">
+<head>
+    <meta charset="UTF-8">
+    <title>SIH</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/sih.css">
+    <!-- libraries -->
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/ui-bootstrap-tpls-0.11.2.min.js"></script>
+    <script src="js/angular-animate.min.js"></script>
+
+ <!-- js files -->
+    <script src="app.js"></script>
+
+</head>
+<body ng-controller="cqueueCtrl">
+
+<div class="container">
+
+  <div>
+     <a class="btn btn-success" href="map"  style="margin-left:0px">Go To Map</a>
+     <button class="btn btn-danger" ng-click="showq()"  style="margin:10px">Show queue</button>
+  </div>    
+
+  <div class="alert alert-danger alert-dismissable fade in" id="alert1" style="display:none">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Counter 2!</strong> is empty!!, GO THERE!.
+  </div>
+<div class="alert alert-danger alert-dismissable fade in" id="alert2" style="display:none">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Counter 4!</strong> is empty!!, GO THERE!.
+  </div>
+<div class="alert alert-danger alert-dismissable fade in" id="alert3" style="display:none">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Counter 3!</strong> is empty!!, GO THERE!.
+  </div>
+
+     <div style="display:inline-block"> 
+          <!-- <img ng-repeat="image in imagelist" id="i1" ng-src="{{image.imagepath}}" height="200" width="200" style="display:none"> -->
+          <p ng-model="time1"><b>Average processing time:{{time1}} </b></p>
+          <h4>Counter 1</h4>
+          <img src="img/i2.jpeg" id="i1" height="100" width="100" style="display:none">
+          <img src="img/i2.jpeg" id="i2" height="70" width="70" style="display:none">
+          <img src="img/i2.jpeg" id="i3" height="50" width="50" style="display:none">
+          <img src="img/i2.jpeg" id="new_img" height="50" width="50" style="display:none">
+     </div>
+  
+     <div style="display:inline-block;margin:20px">
+         <p ng-model="time2"><b>Average processing time:{{time2}}</b></p>
+         <h4>Counter 2</h4>
+          <img src="img/i2.jpeg" id="i4" height="100" width="100" style="display:none">
+          <img src="img/i2.jpeg" id="i5" height="70" width="70" style="display:none">
+          <img src="img/i2.jpeg" id="i6" height="50" width="50" style="display:none">
+     </div>
+  
+     <div style="display:inline-block;margin:20px">
+         <p ng-model="time3"><b>Average processing time:{{time3}}</b></p>
+         <h4>Counter 3</h4>
+          <img src="img/i2.jpeg" id="i7" height="100" width="100" style="display:none">
+          <img src="img/i2.jpeg" id="i8" height="70" width="70" style="display:none">
+
+     </div>
+
+     <div style="display:inline-block">
+         <p ng-model="time4"><b>Average processing time:{{time4}}</b></p>
+         <h4>Counter 4</h4>
+          <img src="img/i2.jpeg" id="i9" height="100" width="100" style="display:none">
+          <img src="img/i2.jpeg" id="i10" height="70" width="70" style="display:none">
+          <img src="img/i2.jpeg" id="i11" height="50" width="50" style="display:none">
+
+     </div>
+
+
+</div>
+
+
+</body>
+</html>

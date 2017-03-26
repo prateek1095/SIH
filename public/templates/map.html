@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html ng-app="SihApp">
+  <head>
+    <title>Geolocation</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/sih.css">
+
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/ui-bootstrap-tpls-0.11.2.min.js"></script>
+    <script src="js/angular-animate.min.js"></script>
+
+    <script src="app.js"></script>
+
+  </head>
+  <body ng-controller="SihCtrl">
+
+  <div class="alert alert-success alert-dismissable fade in" id="mapalert" style="display:none">
+    <strong>Estimated Time to reach destination is: </strong> 
+  </div>
+
+      <div id="left-panel">
+      <h4 id="budget">Flight Details</h4>
+      <div>
+          <form style="font-family: 'Abel'">
+            <label>Flight NO:</label>
+            <input value="IJ700">
+            <label>Departure From: Delhi</label>
+            <input value="5:50 am">
+            <label>Arriving at: Kolkata</label>
+            <input value="7:30 am">
+          </form>
+          <div id="directions-panel">
+          </div>
+          <a class="btn btn-danger" href="cqueue" ng-click="showq()" ng-disabled="myform.$invalid" style="margin:10px">Show queue</a>
+      </div>
+    </div>
+    <div id="floating-panel">
+      <strong>Your Location:</strong>
+       <input id="point0" class="controls" type="text" placeholder="select location">
+      <strong>Nearest Airport:</strong>
+       <input id="point1" class="controls" type="text" list="airport" placeholder="getting nearest airport" ng-model="nearestAirport">
+        <datalist id="airport" ng-model="data.airports">
+            <option id="a1">{{airport.id.DEL}}</option>
+            <option id="a2">{{airport.id.IXA}}</option>
+            <option id="a3">{{airport.id.AMD}}</option>
+            <option id="a4">{{airport.id.ATQ}}</option>
+            <option id="a5">Bengaluru</option>
+            <option value="Bhubaneswar"></option>
+            <option value="Chandigarh"></option>
+        </datalist>
+
+
+      <strong>Mode:</strong>
+      <select id="mode">
+          <option value="DRIVING">Driving</option>
+          <option value="WALKING">Walking</option>
+          <option value="TRANSIT">Transit</option>
+      </select>
+
+    </div>
+    <div id="right-panel">
+      <h4 id="direction">Directions</h4>
+    </div>
+
+    
+    <div id="map"></div>
+    
+    <script async defer src="https://maps.googleapis.com/maps/api/js?libraries=places&sensor=false&key=AIzaSyBYAFNYV2LYJFqQ9qdF_DryQ1TBeHvTZVE&callback=initMap">
+    </script>
+
+    
+  </body>
+</html>
