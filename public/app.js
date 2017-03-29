@@ -69,6 +69,7 @@ app.controller('cqueueCtrl',  function($scope){
 
             setTimeout(function() {
               document.getElementById('i1').style.display='none'
+              document.getElementById('ic1').style.display='block'
             },  6000);
             setTimeout(function() {
               document.getElementById('i2').style.display='none'
@@ -83,6 +84,7 @@ app.controller('cqueueCtrl',  function($scope){
     //counter 2
             setTimeout(function() {
               document.getElementById('i4').style.display='none'
+              document.getElementById('ic2').style.display='block'
             },  3000);
             setTimeout(function() {
               document.getElementById('i5').style.display='none'
@@ -97,6 +99,7 @@ app.controller('cqueueCtrl',  function($scope){
     //counter 3
           setTimeout(function() {
               document.getElementById('i7').style.display='none'
+              document.getElementById('ic3').style.display='block'
             },  7000);
           setTimeout(function() {
               document.getElementById('i8').style.display='none'
@@ -106,6 +109,7 @@ app.controller('cqueueCtrl',  function($scope){
     //counter 4
           setTimeout(function() {
               document.getElementById('i9').style.display='none'
+              document.getElementById('ic4').style.display='block'
             },  4500);
           setTimeout(function() {
               document.getElementById('i10').style.display='none'

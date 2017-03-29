@@ -10,8 +10,15 @@
 <body ng-controller="SihCtrl">
 
 <div class="container">
-    <h3 style="text-align:center">Ministry Of Civil Aviation</h3>
-<form name="myform" style="padding:20px">
+
+<video poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" playsinline autoplay muted loop>
+  <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+<source src="http://thenewcode.com/assets/videos/polina.webm" type="video/webm">
+<source src="http://thenewcode.com/assets/videos/polina.mp4" type="video/mp4">
+</video>
+        <h3 style="float:left;color:white">SIH</h3>
+        <h3 style="float:right;color:white">Ministry Of Civil Aviation</h3>
+<form name="myform" style="padding:20px;margin-top:120px">
     <input type="text" placeholder="Airport" list="airport" style="margin:10px" ng-model="data.airport" required>
     <datalist id="airport" ng-model="data.airports">
         <option id="a1">{{airport.id.DEL}}</option>
@@ -38,10 +45,9 @@
         <option value="AI700"></option>
     </datalist>
 
-    <a class="btn btn-success" href="map"  ng-disabled="myform.$invalid" style="margin:10px;">Submit</a>
+   <!-- <a class="btn btn-success" href="map"  ng-disabled="myform.$invalid" style="margin:10px;">Submit</a>-->
 
-    <!-- <button class="btn btn-danger" ng-click="showq()" ng-disabled="myform.$invalid" style="margin:10px">Show queue</button>
-    -->
+    <a href="map"  class="button button2 big">Submit</a>    
    </form> 
     <hr>
 </div>

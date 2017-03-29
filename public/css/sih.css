@@ -10,6 +10,7 @@ html, body {
         height: 100%;
         margin: 0;
         padding: 0;
+        font-family: "Montserrat", sans-serif;
       }
       #map {
         height: 100%;
@@ -92,4 +93,64 @@ html, body {
         text-align: center;
         font-family: sans-serif;        
       }
+
+    video { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+ background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
+}
+.stopfade { 
+   opacity: .5;
+}
+@media screen and (max-width: 500px) { 
+  div{width:70%;} 
+}
+@media screen and (max-device-width: 800px) {
+  html { background: url(https://thenewcode.com/assets/images/polina.jpg) #000 no-repeat center center fixed; }
+  #bgvid { display: none; }
+}
+.button.button2:hover{
+  background: #d6422a;
+  color: #ffffff;
+  border-color : #d6422a;
+}
+.button.big{
+  padding: 20px 40px;
+  height: 60px;
+}
+.button.button2{
+  border:2px solid #FF764A;
+  text-decoration: none;
+  color:#d6422a; 
+}
+.button{
+  font-size: 18px;
+  display: inline-block;
+  text-align: center;
+  line-height: 1;
+  cursor: pointer;
+  transition :background-color 0.25s ease-out, color 0.25s ease-out;
+  vertical-align: middle;
+  margin: 0 0 1rem 0;
+      min-width:20%;
+    max-width:20%;
+    margin:0% 39% 0% 40%;  
+  
+}
+#counter{
+  width: 170px;
+  height: 80px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  text-align: center;
+}
       
